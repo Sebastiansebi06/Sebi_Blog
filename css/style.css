@@ -1,0 +1,302 @@
+/* Blog Perimeter */
+:root {
+    /* Blog HEADER */
+    --HeaderHeight: 8vh;
+    --HeaderWidth: 100%;
+    --TopHeaderHeightIMG: 70px;
+
+    --HeaderBackgroundColor: white;
+}
+
+/*************************/
+/* Blog Default Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 90%;
+    height: 100%;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/***************/
+/* Blog Header */
+#blogHeader {
+    height: var(--HeaderHeight);
+    width: 100%;
+
+}
+    #headerIMG {
+        height: 7.9vh;
+        width: auto;
+
+        float: left;
+    }
+
+    #headerNavbar {
+        height: var(--HeaderHeight);
+        width: 80%;
+
+        margin-left: 25%;
+        padding-top: 20px;
+    }
+    #headerNavbar li {
+        float: left;
+        list-style: none;
+
+        margin-left: 3%;
+    }
+    #headerNavbar li a {
+        position: relative;
+        display: inline-block;
+
+        color: black;
+    }
+        #headerNavbar li a::after {
+            content: '';
+            position: absolute;
+
+            width: 0;
+            height: 2px;
+            
+            display: block;
+            margin-top: 2px;
+            left: 0;
+            
+            background: currentColor;
+            
+            transition: width 0.3s ease, right 0.3s ease;
+        }
+        
+        #headerNavbar li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        #headerNavbar li a:hover {
+            text-decoration: none;
+
+            color: blueviolet;
+        }
+
+    #headerSearchbar {
+        height: var(--HeaderHeight);
+        width: 80%;
+
+        margin-top: -2%;
+    }
+        #headerInput {
+            height: 35px;
+            width: 200px;
+
+            flex: 1;
+
+            padding-left: 10px;
+            margin-left: 5%;
+
+            outline: none;
+
+            border: 1px black solid;
+            border-right: none;
+
+            border-top-left-radius: 1.5vh;
+            border-bottom-left-radius: 1.5vh;
+        }
+        #headerSearchButton {
+            height: 35px;
+            width: 40px;
+
+            flex: 1;
+            
+            margin-left: -4px;
+
+            border: none;
+            border-top: 1px black solid;
+            border-right: 1px black solid;
+            border-bottom: 1px black solid;
+
+            border-top-right-radius: 1.5vh;
+            border-bottom-right-radius: 1.5vh;
+
+            outline: none;
+            background-color: white;
+        }
+
+
+/*****************************/
+/* Blog Content (Start Page) */
+#contentStartPage {
+    height: 85vh;
+    width: 100%;
+
+    margin-top: 30px;
+}
+    #contentStartPage h1 {
+        width: 100%;
+        font-family: "Archivo Black", sans-serif;
+    }
+
+#startPageWidgets {
+    height: 76vh;
+    width: 100%;
+
+    margin-top: 2vh;
+}
+
+    #widgetDailyMotivation {
+        float: left;
+
+        margin-right: 0.5%;
+    }
+        #widgetDailyMotivation img {
+            height: 76vh;
+            width: 35vw;
+
+            border-radius: 2.5vh;
+        }
+
+    #widgetCourse {
+        height: 45vh;
+        width: 67vh;
+
+        float: left;
+        border-radius: 2.5vh;
+
+        background-image: linear-gradient(45deg, #d3d3d3 40%, blueviolet 80%);
+
+        padding-top: 15px;
+        padding-left: 15px;
+        margin-right: 0.5%;
+    }
+        #widgetCourse p {
+            font-size: 12px;
+        }
+        #widgetCourse h2 {
+            font-family: "Archivo Black", sans-serif;
+        }
+
+        #widgetCourse1 {
+            height: 5.5vh;
+            width: auto;
+
+            margin-left: -15px;
+            padding-left: 15px;
+            padding-top: 1vh;
+
+            border-top: 1px black solid;
+            border-bottom: 1px black solid;
+        }
+        #widgetCourse2 {
+            height: 5vh;
+            width: auto;
+
+            margin-left: -15px;
+            padding-left: 15px;
+            padding-top: 1.5vh;
+        }
+       
+    #widgetDrink {
+        float: left;
+    }
+        #widgetDrink img {
+            height: 45vh;
+            width: auto;
+
+            border-radius: 2.5vh;
+        }
+
+    #widgetVideo {
+        float: left;
+
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+    }
+        #widgetVideo img {
+            height: 30vh;
+            width: 29vw;
+
+            border-radius: 2.5vh;
+        }
+
+
+    #wigetCategories {
+        height: 30vh;
+        width: 42vh;
+
+        float: left;
+        border-radius: 2.5vh;
+
+        background-color: blueviolet;
+
+        padding-top: 15px;
+        padding-left: 15px;
+        margin-top: 0.5%;
+    }
+    #viewAllCategories {
+        height: 4vh;
+        width: 6vh;
+
+        float: left;
+        margin-left: 10vh;
+
+        border: 1px black solid;
+        border-radius: 10vh;
+    }
+        #categorieButton {
+            height: 6vh;
+            width: 13vh;
+
+            background-color: beige;
+
+            border: 1px black solid;
+            border-radius: 15vh;
+        }
+
+
+    /*-------------------------*/
+    /*------ F O O T E R ------*/
+    /*-------------------------*/
+    .footer {
+        height: 100px;
+        width: 100%;
+
+
+        background-color: black;
+    }
+        .socialIcons {
+            
+            background-color: white;
+        }
+
+        #footerFacebook, #footerInstagram, #footerTwitter, #footerLinkedIn {
+            height: 40px;
+            width: 40px;
+
+            border-radius: 50%;
+            margin-top: 10px;
+
+            background-color: white;
+        }
+
+
+    /*-------------------------------*/
+    /*------ C O P Y R I G H T ------*/
+    /*-------------------------------*/
+    #copyright {
+        margin-left: -200px;
+        margin-right: -200px;
+        
+        color: white;
+        background-color: black;
+
+        text-align: center;
+
+        padding-bottom: 5px;
+    }
+
+
